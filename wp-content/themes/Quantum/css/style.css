@@ -1,0 +1,23 @@
+/*
+Theme Name: Quantum
+Author: DRIMchansky
+Version: 0.0.3
+*/
+
+@import './base/custom-normalize.css';
+@import './base/utility-classes.css';
+@import './base/properties.css';
+@import './modules/page.css';
+@import './modules/container.css';
+@import './modules/header.css';
+@import './modules/banner.css';
+@import './modules/hamburger.css';
+@import './modules/button.css';
+@import './modules/logo.css';
+@import './modules/nav.css';
+@import './modules/social.css';
+@import './modules/photos.css';
+@import './modules/post.css';
+@import './modules/vk-viget.css';
+@import './modules/footer.css';
+@import './modules/site-map.css';

@@ -1,0 +1,268 @@
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 0.9rem;
+
+  @media (min-width: 768px) {
+    width: auto;
+  }
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  position: relative;
+
+  @media (min-width: 992px) {
+    padding: 0 5px;
+  }
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 5px;
+  color: var(--c-dark);
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media (min-width: 992px) {
+    &::before {
+      position: absolute;
+      bottom: -7px;
+      left: 6px;
+      width: 40px;
+      height: 20px;
+      content: '';
+      background: url('images/shadow.png') no-repeat;
+      background-size: contain;
+    }
+
+    &:hover::before {
+      display: none;
+    }
+  }
+
+  &:hover svg {
+    transform: rotate(0deg);
+  }
+
+  & svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+    fill: var(--c-brand);
+    transition: transform 0.2s ease-out;
+    transform: rotate(-11deg);
+    transform-origin: 0 100%;
+
+    @media (min-width: 992px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.nav_type-one {
+  @media (min-width: 768px) {
+    margin-left: 30px;
+
+    & svg {
+      transition: transform var(--t-duration);
+    }
+  }
+
+  @media (min-width: 992px) {
+    margin-left: 60px;
+  }
+}
+
+.nav_type-two {
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 90px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  & ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      height: auto;
+    }
+  }
+
+  & li {
+    @media (min-width: 768px) {
+      min-height: 60px;
+      padding: 0;
+    }
+  }
+
+  & li:not(:first-child) {
+    margin-top: 40px;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  & li:last-child {
+    @media (min-width: 768px) {
+      margin-left: auto;
+    }
+  }
+
+  & > ul > li:first-child {
+    & a {
+      @media (min-width: 768px) {
+        color: #fff;
+        background: var(--c-brand);
+        transition: opacity 0.2s;
+
+        &:hover,
+        &:focus {
+          background: var(--c-brand);
+          opacity: 0.9;
+        }
+      }
+    }
+
+    & svg {
+      fill: #fff;
+    }
+  }
+
+  & a {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      padding: 0 20px;
+    }
+
+    @media (min-width: 992px) {
+      padding: 0 35px;
+    }
+
+    /* hide shadows */
+    @media (min-width: 992px) {
+      &::before {
+        display: none;
+      }
+    }
+
+    & svg {
+      display: none;
+      transform: rotate(0);
+
+      @media (min-width: 768px) {
+        display: block;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+/* DROPDOWN */
+
+.nav_type-two {
+  & ul li ul {
+    display: none;
+    border-radius: 0 0 10% 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav_type-two {
+    position: relative;
+
+    & ul li:hover,
+    ul li a:focus {
+      background: var(--c-lightgray);
+      outline: none;
+    }
+
+    & ul li ul {
+      display: none;
+      min-width: 140px;
+      background: #fff;
+    }
+
+    & ul li ul li {
+      height: 30px;
+
+      &:not(:first-child)::before {
+        position: absolute;
+        left: 50%;
+        width: 30%;
+        height: 2px;
+        content: '';
+        background: var(--c-lightgray);
+        border-radius: 5px;
+        transform: translateX(-50%);
+      }
+    }
+
+    & ul li ul li a {
+      display: block;
+      height: 100%;
+      line-height: 60px;
+      color: var(--c-dark);
+      text-align: center;
+      text-decoration: none;
+      transition: all var(--t-duration);
+    }
+
+    & ul li:hover > ul,
+    ul li:focus-within > ul,
+    ul li ul:focus,
+    ul li ul:hover {
+      position: absolute;
+      right: 50%;
+      display: block;
+      transform: translateX(50%);
+
+      &::before {
+        position: absolute;
+        right: 50%;
+        width: 70px;
+        height: 2px;
+        content: '';
+        background: var(--c-brand);
+        border-radius: 3px;
+        transform: translateX(50%);
+      }
+    }
+  }
+}
+
+.footer_nav {
+  margin-top: 15px;
+
+  @media (min-width: 576px) {
+    margin-top: 0;
+  }
+
+  & a {
+    color: #fff;
+  }
+
+  & svg {
+    fill: #fff;
+    transform: none;
+  }
+}

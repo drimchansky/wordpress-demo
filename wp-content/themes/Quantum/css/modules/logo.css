@@ -1,0 +1,28 @@
+/* LOGO */
+.logo {
+  position: relative;
+  padding: 10px;
+  font-size: 38px;
+  font-weight: bold;
+  color: var(--c-brand);
+  text-decoration: none;
+
+  &__desc {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 300px;
+    font-size: 0.5em;
+    font-weight: normal;
+  }
+}
+
+.header_logo {
+  @media (min-width: 768px) {
+    margin-right: initial;
+  }
+}
+
+.footer_logo {
+  left: -25px;
+}

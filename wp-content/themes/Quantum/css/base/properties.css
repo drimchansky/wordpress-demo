@@ -1,0 +1,10 @@
+:root {
+  --f-main: 'Roboto Slab', serif;
+  --c-brand: #0d4981;
+  --c-dark: #333;
+  --c-lightgray: #f1f2f3;
+  --c-darkgray: #565656;
+  --c-darkorange: #a89245;
+  --c-lightorange: #faf0ca;
+  --t-duration: 0.2s;
+}

@@ -1,0 +1,42 @@
+/* SITE MAP */
+
+.site-map {
+  padding: 10px;
+
+  &__list {
+  }
+
+  &__item {
+    padding: 4px 4px 4px 0;
+  }
+
+  &__item:first-child {
+    position: relative;
+
+    & a {
+      font-size: 1.2rem;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: -11px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      content: '';
+      background: var(--c-darkgray);
+    }
+  }
+
+  &__item:nth-child(2) {
+    margin-top: 22px;
+  }
+
+  &__link {
+    display: block;
+    height: 100%;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+  }
+}

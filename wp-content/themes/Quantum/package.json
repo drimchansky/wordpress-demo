@@ -1,0 +1,119 @@
+{
+  "name": "Diopside",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier",
+    "lint": "node -e console.clear() && stylelint ./css/**/*.css",
+    "lint-fix": "node -e console.clear() && stylelint ./css/**/*.css --fix",
+    "dev": "gulp watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@prettier/plugin-php": "^0.11.2",
+    "autoprefixer": "^9.7.5",
+    "babel-loader": "^8.1.0",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "normalize.css": "^8.0.1",
+    "postcss-custom-properties": "^9.0.2",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.1.2",
+    "prettier": "^1.19.1",
+    "stylelint": "^12.0.0",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-standard": "^19.0.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "postcss": {
+    "modules": false,
+    "plugins": {
+      "autoprefixer": {
+        "grid": true
+      },
+      "postcss-nested": {},
+      "postcss-custom-properties": {
+        "preserve": true,
+        "importFrom": "./css/properties.css"
+      }
+    }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "dist",
+    ".cache",
+    "gulpfile.js"
+  ],
+  "stylelint": {
+    "plugins": [
+      "stylelint-order"
+    ],
+    "rules": {
+      "value-list-comma-newline-after": [
+        "always"
+      ],
+      "declaration-block-trailing-semicolon": null,
+      "block-closing-brace-newline-before": null,
+      "block-opening-brace-space-before": null
+    },
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-recess-order"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 85
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error"
+      ],
+      "linebreak-style": 0,
+      "no-console": "off",
+      "indent": [
+        "error",
+        2
+      ],
+      "import/prefer-default-export": "off",
+      "semi": [
+        2,
+        "never"
+      ]
+    }
+  },
+  "dependencies": {
+    "lite-youtube-embed": "0.0.0"
+  }
+}

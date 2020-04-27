@@ -1,0 +1,47 @@
+/* BUTTON */
+
+.button {
+  text-align: center;
+  display: block;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #fff;
+  background: var(--c-brand);
+  text-transform: uppercase;
+  transition: box-shadow var(--t-duration);
+  box-shadow: 0 5px 15px rgba(37, 34, 29, 0.15);
+  opacity: 0.98;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: none;
+    opacity: 1;
+  }
+}
+
+.banner_button {
+  max-width: 210px;
+  padding: 25px 25px;
+  margin: 30px auto 0 auto;
+
+  @media (min-width: 768px) {
+    margin-top: 60px;
+  }
+
+  &:focus {
+    outline-color: #fff;
+  }
+}
+
+.post_button {
+  max-width: 500px;
+  width: auto;
+  padding: 10px 30px;
+  margin-top: 20px;
+
+  @media (min-width: 576px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
