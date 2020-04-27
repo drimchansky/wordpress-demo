@@ -674,8 +674,7 @@ serif;
   padding: 10px;
   font-size: 38px;
   font-weight: bold;
-  color: #0d4981;
-  color: var(--c-brand);
+  color: black;
   text-decoration: none;
 }
 

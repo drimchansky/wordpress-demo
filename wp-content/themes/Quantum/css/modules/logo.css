@@ -4,7 +4,7 @@
   padding: 10px;
   font-size: 38px;
   font-weight: bold;
-  color: var(--c-brand);
+  color: black;
   text-decoration: none;
 
   &__desc {
