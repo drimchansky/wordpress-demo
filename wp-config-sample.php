@@ -20,19 +20,13 @@
 
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
-
-define( 'WP_HOME', 'http://u1036627.isp.regruhosting.ru' );
-define( 'WP_SITEURL', 'http://u1036627.isp.regruhosting.ru' );
-
-
-
-define( 'DB_NAME', 'u1036627_data' );
+define( 'DB_NAME', 'database_name_here' );
 
 /** Имя пользователя MySQL */
-define( 'DB_USER', 'u1036627_drim' );
+define( 'DB_USER', 'username_here' );
 
 /** Пароль к базе данных MySQL */
-define( 'DB_PASSWORD', 'A6e6G6o8' );
+define( 'DB_PASSWORD', 'password_here' );
 
 /** Имя сервера MySQL */
 define( 'DB_HOST', 'localhost' );
