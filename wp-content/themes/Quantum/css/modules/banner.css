@@ -8,8 +8,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
+  top: 0;
 
   @media (min-width: 768px) {
     height: 600px;

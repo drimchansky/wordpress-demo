@@ -18,18 +18,13 @@
       <h2 class="post__title">Placeholder title</h2>
       <div class="post__info">
         <div class="post__info-item">
-          <svg>
-            <use xlink:href="<?php echo get_theme_file_uri() .
-              '/images/calendar.svg#calendar'; ?>"></use>
-          </svg>
+          <?php get_template_part('images/inline/calendar'); ?>
           <span>Date</span>
         </div>
         <div class="post__info-item">
           <svg>
-            <use xlink:href="<?php echo get_theme_file_uri() .
-              '/images/user.svg#user'; ?>"></use>
-          </svg>
-          <span>Author</span>
+            <?php get_template_part('images/inline/user'); ?>
+            <span>Author</span>
         </div>
       </div>
       <p class="post__text">
@@ -50,10 +45,26 @@
     <div class="photos__inner">
       <h2 class="photos__title">Последние фото</h2>
       <ul class="photos__list">
-        <li class="photos__item"><img src="" alt="" class="photos__img"></li>
-        <li class="photos__item"><img src="" alt="" class="photos__img"></li>
-        <li class="photos__item"><img src="" alt="" class="photos__img"></li>
-        <li class="photos__item"><img src="" alt="" class="photos__img"></li>
+        <li class="photos__item">
+          <div>
+            <img src="" alt="" class="photos__img">
+          </div>
+        </li>
+        <li class="photos__item">
+          <div>
+            <img src="" alt="" class="photos__img">
+          </div>
+        </li>
+        <li class="photos__item">
+          <div>
+            <img src="" alt="" class="photos__img">
+          </div>
+        </li>
+        <li class="photos__item">
+          <div>
+            <img src="" alt="" class="photos__img">
+          </div>
+        </li>
       </ul>
     </div>
     <a class="button post_button">Все фото</a>

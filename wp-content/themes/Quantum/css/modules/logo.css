@@ -24,5 +24,6 @@
 }
 
 .footer_logo {
+  color: var(--c-lightgray);
   left: -25px;
 }

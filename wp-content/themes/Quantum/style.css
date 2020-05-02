@@ -231,7 +231,7 @@ footer *:focus:not([tabindex='-1']) {
   }
 
 :root {
-  --f-main: 'Roboto Slab', serif;
+  --f-main: 'Roboto', sans-serif;
   --c-brand: #0d4981;
   --c-dark: #333;
   --c-lightgray: #f1f2f3;
@@ -244,9 +244,9 @@ footer *:focus:not([tabindex='-1']) {
 /* PAGE */
 
 .page {
-  font-family: 'Roboto Slab'
+  font-family: 'Roboto'
 ,
-serif;
+sans-serif;
   font-family: var(--f-main);
   font-size: 16px;
 }
@@ -316,12 +316,17 @@ serif;
   }
 
 .front-page_container {
-  display: grid;
-  grid-auto-flow: dense;
-  gap: 1rem;
   padding: 1rem 10px;
-  grid-template-columns: repeat(4, 1fr);
 }
+
+@supports (grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))) {
+
+.front-page_container {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-gap: 1rem
+}
+  }
 
 .header {
   background: #fff;
@@ -360,7 +365,7 @@ serif;
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 10;
+      z-index: 100;
       display: none;
       width: 100%;
       height: 60px;
@@ -400,8 +405,8 @@ serif;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
+  top: 0;
 }
 
 @media (min-width: 768px) {
@@ -489,7 +494,7 @@ serif;
   position: absolute;
   top: 15px;
   right: 15px;
-  z-index: 11;
+  z-index: 200;
   display: inline-block;
   padding: 15px 15px;
   margin: 0;
@@ -576,14 +581,11 @@ serif;
 }
 
 .hamburger--spin .hamburger-inner::before {
-  transition:
-    top 0.1s 0.25s ease-in,
-    opacity 0.1s ease-in;
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
 }
 
 .hamburger--spin .hamburger-inner::after {
-  transition:
-    bottom 0.1s 0.25s ease-in,
+  transition: bottom 0.1s 0.25s ease-in,
     transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
@@ -596,15 +598,12 @@ serif;
 .hamburger--spin.is-active .hamburger-inner::before {
   top: 0;
   opacity: 0;
-  transition:
-    top 0.1s ease-out,
-    opacity 0.1s 0.12s ease-out;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
 }
 
 .hamburger--spin.is-active .hamburger-inner::after {
   bottom: 0;
-  transition:
-    bottom 0.1s ease-out,
+  transition: bottom 0.1s ease-out,
     transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   transform: rotate(-90deg);
 }
@@ -695,6 +694,8 @@ serif;
   }
 
 .footer_logo {
+  color: #f1f2f3;
+  color: var(--c-lightgray);
   left: -25px;
 }
 
@@ -716,6 +717,8 @@ serif;
 
 .nav__list {
   display: flex;
+  z-index: 20;
+  position: relative;
 }
 
 .nav__item {
@@ -1126,29 +1129,50 @@ object {
   display: flex;
   padding: 1rem;
   flex-direction: column;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  transition: box-shadow 0.2s;
 }
+
+.photos__inner:hover,
+  .photos__inner:focus-within {
+    box-shadow: rgba(102, 51, 153, 0.2) 5px 20px 50px;
+  }
 
 .photos__title {
 }
 
 .photos__list {
   margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
   width: 100%;
+  display: flex;
 }
 
+@supports (grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))) {
+
+.photos__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px
+}
+  }
+
 .photos__item {
-  background: url('images/placeholder.png');
+  background: url('images/placeholder.png') no-repeat;
   background-size: contain;
   background-position: center center;
   border: 1px solid #f1f2f3;
   border: 1px solid var(--c-lightgray);
-  padding-bottom: 100%;
+  display: block;
   position: relative;
+  flex: 1;
 }
+
+.photos__item > div {
+    padding-bottom: 100%;
+    position: relative;
+  }
 
 .photos__img {
   position: absolute;
@@ -1182,7 +1206,15 @@ object {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  transition: box-shadow 0.2s;
 }
+
+.post__inner:hover,
+  .post__inner:focus-within {
+    box-shadow: rgba(102, 51, 153, 0.2) 5px 20px 50px;
+  }
 
 .post__title {
 }
@@ -1240,7 +1272,15 @@ object {
   align-items: center;
   grid-column: 1 / span 4;
   margin: 0 auto;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  transition: box-shadow 0.2s;
 }
+
+.vk:hover,
+  .vk:focus-within {
+    box-shadow: rgba(102, 51, 153, 0.2) 5px 20px 50px;
+  }
 
 @media (min-width: 576px) {
 

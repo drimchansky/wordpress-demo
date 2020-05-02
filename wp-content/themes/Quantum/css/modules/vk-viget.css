@@ -10,6 +10,14 @@
   align-items: center;
   grid-column: 1 / span 4;
   margin: 0 auto;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  transition: box-shadow 0.2s;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: rgba(102, 51, 153, 0.2) 5px 20px 50px;
+  }
 
   @media (min-width: 576px) {
     grid-column: 3 / 5;

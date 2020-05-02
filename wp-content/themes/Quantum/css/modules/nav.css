@@ -12,6 +12,8 @@
 
 .nav__list {
   display: flex;
+  z-index: 20;
+  position: relative;
 }
 
 .nav__item {

@@ -19,42 +19,27 @@
         <ul class="social__list">
           <li class="social__item">
             <a href="#" class="social__link">
-              <svg>
-                <use xlink:href="<?php echo get_theme_file_uri() .
-                  '/images/call.svg#call'; ?>"></use>
-              </svg>
+              <?php get_template_part('images/inline/call'); ?>
             </a>
           </li>
           <li class="social__item">
             <a href="#" class="social__link">
-              <svg>
-                <use xlink:href="<?php echo get_theme_file_uri() .
-                  '/images/whatsapp.svg#whatsapp'; ?>"></use>
-              </svg>
+              <?php get_template_part('images/inline/watsapp'); ?>
             </a>
           </li>
           <li class="social__item">
             <a href="#" class="social__link">
-              <svg>
-                <use xlink:href="<?php echo get_theme_file_uri() .
-                  '/images/instagram.svg#instagram'; ?>"></use>
-              </svg>
+              <?php get_template_part('images/inline/instagram'); ?>
             </a>
           </li>
           <li class="social__item">
             <a href="#" class="social__link">
-              <svg>
-                <use xlink:href="<?php echo get_theme_file_uri() .
-                  '/images/vk.svg#vk'; ?>"></use>
-              </svg>
+              <?php get_template_part('images/inline/vk'); ?>
             </a>
           </li>
           <li class="social__item">
             <a href="#" class="social__link">
-              <svg>
-                <use xlink:href="<?php echo get_theme_file_uri() .
-                  '/images/youtube.svg#youtube'; ?>"></use>
-              </svg>
+              <?php get_template_part('images/inline/youtube'); ?>
             </a>
           </li>
         </ul>
@@ -88,10 +73,7 @@
         <ul class="nav__list">
           <li class="nav__item">
             <a href="#" class="nav__link hide-pseudo">
-              <svg>
-                <use xlink:href="<?php echo get_theme_file_uri() .
-                  '/images/enter.svg#enter'; ?>"></use>
-              </svg>
+              <?php get_template_part('images/inline/enter'); ?>
               <span>Личный кабинет</span>
             </a>
           </li>

@@ -20,6 +20,14 @@
   display: flex;
   padding: 1rem;
   flex-direction: column;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  transition: box-shadow 0.2s;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: rgba(102, 51, 153, 0.2) 5px 20px 50px;
+  }
 }
 
 .photos__title {
@@ -27,20 +35,30 @@
 
 .photos__list {
   margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
   width: 100%;
+  display: flex;
+
+  @supports (grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
 }
 
 .photos__item {
-  background: url('images/placeholder.png');
+  background: url('images/placeholder.png') no-repeat;
   background-size: contain;
   background-position: center center;
   border: 1px solid var(--c-lightgray);
-  padding-bottom: 100%;
+  display: block;
   position: relative;
+  flex: 1;
+
+  & > div {
+    padding-bottom: 100%;
+    position: relative;
+  }
 }
 
 .photos__img {
