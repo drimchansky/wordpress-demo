@@ -24,7 +24,7 @@
           </li>
           <li class="social__item">
             <a href="#" class="social__link">
-              <?php get_template_part('images/inline/watsapp'); ?>
+              <?php get_template_part('images/inline/whatsapp'); ?>
             </a>
           </li>
           <li class="social__item">

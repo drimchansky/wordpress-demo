@@ -1,0 +1,1 @@
+<div class="vk">vk placeholder</div>

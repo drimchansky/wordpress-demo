@@ -34,4 +34,8 @@
     display: grid;
     grid-gap: 1rem;
   }
+
+  @media (min-width: 768px) {
+    padding-bottom: 3rem;
+  }
 }

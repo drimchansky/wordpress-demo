@@ -328,6 +328,13 @@ sans-serif;
 }
   }
 
+@media (min-width: 768px) {
+
+.front-page_container {
+    padding-bottom: 3rem
+}
+  }
+
 .header {
   background: #fff;
 }
@@ -365,7 +372,7 @@ sans-serif;
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 100;
+      z-index: 160;
       display: none;
       width: 100%;
       height: 60px;
@@ -379,6 +386,7 @@ sans-serif;
 @media (min-width: 768px) {
 
 .header__line_thin {
+        z-index: 100;
         position: relative;
         display: flex;
         width: auto;
@@ -406,7 +414,8 @@ sans-serif;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  top: 0;
+  top: -1px;
+  z-index: 150;
 }
 
 @media (min-width: 768px) {
