@@ -1,25 +1,4 @@
 <?php
-/**
- * Основные параметры WordPress.
- *
- * Скрипт для создания wp-config.php использует этот файл в процессе
- * установки. Необязательно использовать веб-интерфейс, можно
- * скопировать файл в "wp-config.php" и заполнить значения вручную.
- *
- * Этот файл содержит следующие параметры:
- *
- * * Настройки MySQL
- * * Секретные ключи
- * * Префикс таблиц базы данных
- * * ABSPATH
- *
- * @link https://codex.wordpress.org/Editing_wp-config.php
- *
- * @package WordPress
- */
-
-// ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
-/** Имя базы данных для WordPress */
 
 
 if (file_exists(dirname(__FILE__) . '/local.php')) {
@@ -48,8 +27,8 @@ define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
 
 
-define( 'WP_HOME', 'http://u1036627.isp.regruhosting.ru' );
-define( 'WP_SITEURL', 'http://u1036627.isp.regruhosting.ru' );
+define( 'WP_HOME', 'https://drimchansky.space' );
+define( 'WP_SITEURL', 'https://drimchansky.space' );
 }
 
 
