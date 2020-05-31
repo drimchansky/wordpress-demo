@@ -19,5 +19,7 @@
     </p>
     <a class="post__link" href="#">Читать далее</a>
   </div>
-  <a class="button post_button">Читайте наш блог!</a>
+  <a href="<?php echo get_post_type_archive_link(
+      'post'
+  ); ?>" class="button post_button">Читайте наш блог!</a>
 </div>
