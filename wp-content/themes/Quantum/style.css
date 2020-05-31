@@ -395,7 +395,7 @@ sans-serif;
         height: auto;
         background: initial;
         opacity: 1;
-        transform: translate(0)
+        transform: translate(0, 1px)
     }
       }
 
@@ -935,7 +935,7 @@ sans-serif;
 
 .nav_type-two ul li ul {
     display: none;
-    border-radius: 0 0 10% 10%;
+    /* border-radius: 0 0 10% 10%; */
   }
 
 @media (min-width: 768px) {
@@ -943,7 +943,7 @@ sans-serif;
     position: relative;
   }
 
-    .nav_type-two ul li:hover,
+    .nav_type-two ul li a:hover,
     .nav_type-two ul li a:focus {
       background: #f1f2f3;
       background: var(--c-lightgray);
@@ -968,7 +968,7 @@ sans-serif;
         content: '';
         background: #f1f2f3;
         background: var(--c-lightgray);
-        border-radius: 5px;
+        /* border-radius: 5px; */
         transform: translateX(-50%);
       }
 
@@ -1002,7 +1002,7 @@ sans-serif;
         content: '';
         background: #0d4981;
         background: var(--c-brand);
-        border-radius: 3px;
+        /* border-radius: 3px; */
         transform: translateX(50%);
       }
 }

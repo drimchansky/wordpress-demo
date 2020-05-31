@@ -186,7 +186,7 @@
 .nav_type-two {
   & ul li ul {
     display: none;
-    border-radius: 0 0 10% 10%;
+    /* border-radius: 0 0 10% 10%; */
   }
 }
 
@@ -194,8 +194,8 @@
   .nav_type-two {
     position: relative;
 
-    & ul li:hover,
-    ul li a:focus {
+    & ul li a:hover,
+    & ul li a:focus {
       background: var(--c-lightgray);
       outline: none;
     }
@@ -216,7 +216,7 @@
         height: 2px;
         content: '';
         background: var(--c-lightgray);
-        border-radius: 5px;
+        /* border-radius: 5px; */
         transform: translateX(-50%);
       }
     }
@@ -247,7 +247,7 @@
         height: 2px;
         content: '';
         background: var(--c-brand);
-        border-radius: 3px;
+        /* border-radius: 3px; */
         transform: translateX(50%);
       }
     }
