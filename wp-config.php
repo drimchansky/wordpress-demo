@@ -1,39 +1,22 @@
 <?php
 
-
 if (file_exists(dirname(__FILE__) . '/local.php')) {
-  // local 
-  define('DB_NAME', 'quantum');
-  define('DB_USER', 'root');
-  define('DB_PASSWORD', 'root');
-  define('DB_HOST', 'localhost');
+    // local
+    define('DB_NAME', 'local');
+    define('DB_USER', 'root');
+    define('DB_PASSWORD', 'root');
+    define('DB_HOST', 'localhost');
 } else {
-  // live 
-define( 'DB_NAME', 'u1036627_data' );
-
-/** Имя пользователя MySQL */
-define( 'DB_USER', 'u1036627_drim' );
-
-/** Пароль к базе данных MySQL */
-define( 'DB_PASSWORD', 'A6e6G6o8' );
-
-/** Имя сервера MySQL */
-define( 'DB_HOST', 'localhost' );
-
-/** Кодировка базы данных для создания таблиц. */
-define( 'DB_CHARSET', 'utf8' );
-
-/** Схема сопоставления. Не меняйте, если не уверены. */
-define( 'DB_COLLATE', '' );
-
-
-define( 'WP_HOME', 'https://drimchansky.space' );
-define( 'WP_SITEURL', 'https://drimchansky.space' );
+    // live
+    define('DB_NAME', 'u1036627_database_live');
+    define('DB_USER', 'u1036627_user');
+    define('DB_PASSWORD', 'B9s2V2t5');
+    define('DB_HOST', 'localhost');
+    define('DB_CHARSET', 'utf8');
+    define('DB_COLLATE', '');
+    define('WP_HOME', 'https://drimchansky.space');
+    define('WP_SITEURL', 'https://drimchansky.space');
 }
-
-
-
-
 
 /**#@+
  * Уникальные ключи и соли для аутентификации.
@@ -44,14 +27,14 @@ define( 'WP_SITEURL', 'https://drimchansky.space' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'впишите сюда уникальную фразу' );
-define( 'SECURE_AUTH_KEY',  'впишите сюда уникальную фразу' );
-define( 'LOGGED_IN_KEY',    'впишите сюда уникальную фразу' );
-define( 'NONCE_KEY',        'впишите сюда уникальную фразу' );
-define( 'AUTH_SALT',        'впишите сюда уникальную фразу' );
-define( 'SECURE_AUTH_SALT', 'впишите сюда уникальную фразу' );
-define( 'LOGGED_IN_SALT',   'впишите сюда уникальную фразу' );
-define( 'NONCE_SALT',       'впишите сюда уникальную фразу' );
+define('AUTH_KEY', 'впишите сюда уникальную фразу');
+define('SECURE_AUTH_KEY', 'впишите сюда уникальную фразу');
+define('LOGGED_IN_KEY', 'впишите сюда уникальную фразу');
+define('NONCE_KEY', 'впишите сюда уникальную фразу');
+define('AUTH_SALT', 'впишите сюда уникальную фразу');
+define('SECURE_AUTH_SALT', 'впишите сюда уникальную фразу');
+define('LOGGED_IN_SALT', 'впишите сюда уникальную фразу');
+define('NONCE_SALT', 'впишите сюда уникальную фразу');
 
 /**#@-*/
 
@@ -74,14 +57,14 @@ $table_prefix = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', false );
+define('WP_DEBUG', false);
 
 /* Это всё, дальше не редактируем. Успехов! */
 
 /** Абсолютный путь к директории WordPress. */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+if (!defined('ABSPATH')) {
+    define('ABSPATH', dirname(__FILE__) . '/');
 }
 
 /** Инициализирует переменные WordPress и подключает файлы. */
-require_once( ABSPATH . 'wp-settings.php' );
+require_once ABSPATH . 'wp-settings.php';
