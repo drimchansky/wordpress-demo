@@ -4,7 +4,7 @@
   position: relative;
   height: 400px;
   width: 100%;
-  background-color: rgb(201, 178, 178);
+  background-color: #0d4981;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -29,6 +29,14 @@
     top: 0;
     background: #000;
     opacity: 0.3;
+  }
+
+  &__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
   }
 
   &__content {

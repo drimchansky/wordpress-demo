@@ -1,0 +1,7 @@
+.sidebar {
+  grid-column: 1 / span 4;
+
+  @media (min-width: 992px) {
+    grid-column: 4 / 5;
+  }
+}

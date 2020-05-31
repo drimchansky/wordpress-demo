@@ -5,6 +5,8 @@
   display: flex;
   align-items: stretch;
   flex-direction: column;
+  max-width: 600px;
+  margin: 1rem auto 0 auto;
 
   @media (min-width: 576px) {
     grid-column: 1 / span 2;
