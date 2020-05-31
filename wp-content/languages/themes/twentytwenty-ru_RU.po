@@ -6,8 +6,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: GlotPress/2.4.0-alpha\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha\n"
 "Language: ru\n"
 "Project-Id-Version: Themes - Twenty Twenty\n"
 
@@ -214,7 +214,7 @@ msgstr "Комментарии"
 msgid "Comments are closed."
 msgstr "Обсуждение закрыто."
 
-#: inc/starter-content.php:176 inc/starter-content.php:186 functions.php:494
+#: functions.php:492 inc/starter-content.php:176 inc/starter-content.php:186
 msgid "Primary"
 msgstr "Основное"
 
@@ -231,7 +231,7 @@ msgstr "Редактировать <span class=\"screen-reader-text\">%s</span>"
 msgid "Footer Menu"
 msgstr "Меню подвала"
 
-#: template-parts/content-cover.php:138 template-parts/content.php:48
+#: template-parts/content.php:48 template-parts/content-cover.php:138
 msgid "Pages:"
 msgstr "Страницы:"
 
@@ -239,11 +239,11 @@ msgstr "Страницы:"
 msgid "Footer"
 msgstr "Подвал"
 
-#: template-parts/content-cover.php:138 template-parts/content.php:48
+#: template-parts/content.php:48 template-parts/content-cover.php:138
 msgid "Page"
 msgstr "Страница"
 
-#: functions.php:499
+#: functions.php:497
 msgid "Secondary"
 msgstr "Вторичная"
 
@@ -421,55 +421,55 @@ msgstr "Поиск"
 msgid "Continue reading"
 msgstr "Продолжить чтение"
 
-#: functions.php:550
+#: functions.php:548
 msgctxt "Name of the larger font size in the block editor"
 msgid "Larger"
 msgstr "Ещё больше"
 
-#: functions.php:544
+#: functions.php:542
 msgctxt "Name of the large font size in the block editor"
 msgid "Large"
 msgstr "Большой"
 
-#: functions.php:551
+#: functions.php:549
 msgctxt "Short name of the larger font size in the block editor."
 msgid "XL"
 msgstr "XL"
 
-#: functions.php:545
+#: functions.php:543
 msgctxt "Short name of the large font size in the block editor."
 msgid "L"
 msgstr "L"
 
-#: functions.php:539
+#: functions.php:537
 msgctxt "Short name of the regular font size in the block editor."
 msgid "M"
 msgstr "M"
 
-#: functions.php:538
+#: functions.php:536
 msgctxt "Name of the regular font size in the block editor"
 msgid "Regular"
 msgstr "Обычный"
 
-#: functions.php:533
+#: functions.php:531
 msgctxt "Short name of the small font size in the block editor."
 msgid "S"
 msgstr "S"
 
-#: functions.php:532
+#: functions.php:530
 msgctxt "Name of the small font size in the block editor"
 msgid "Small"
 msgstr "Маленький"
 
-#: functions.php:517
+#: functions.php:515
 msgid "Background Color"
 msgstr "Цвет фона"
 
-#: functions.php:504
+#: functions.php:502
 msgid "Subtle Background"
 msgstr "Тонкий фон"
 
-#: functions.php:489
+#: functions.php:487
 msgid "Accent Color"
 msgstr "Цвет акцента"
 
