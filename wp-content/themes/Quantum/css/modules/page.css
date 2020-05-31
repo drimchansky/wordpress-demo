@@ -3,6 +3,7 @@
 .page {
   font-family: var(--f-main);
   font-size: 16px;
+  overflow-x: hidden;
 
   @media (min-width: 576px) {
     font-size: 18px;

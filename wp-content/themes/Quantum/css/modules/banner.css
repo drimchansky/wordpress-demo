@@ -31,14 +31,6 @@
     opacity: 0.3;
   }
 
-  &__background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-  }
-
   &__content {
     position: relative;
     z-index: 10;

@@ -2,7 +2,6 @@
 
 <div class="banner front_banner"
   style="background-image: url('<?php echo get_theme_file_uri(); ?>/images/small-banner-1.jpg')">
-  <img src="" alt="">
   <div class="container">
     <div class="banner__content">
       <h1><span>Детский хоккейный клуб</span>Квантум</h1>
